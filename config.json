@@ -1,0 +1,17 @@
+{
+    "Username":"lephucthuan8@gmail.com",
+    "Passwords":"123456",
+    "MailServer":"127.0.0.1",
+    "SMTP": 275,
+    "POP3": 276,
+    "Autoload": 10,
+    "DB_NAME" : "MailClient",
+    "KEY": "Socket",
+    "filters": [
+        {"type": "Project", "values": ["ahihi@testing.com", "ahuu@testing.com"]},
+        {"type": "Important", "values": ["urgent", "ASAP"]},
+        {"type": "Work", "values": ["report", "meeting"]},
+        {"type": "Spam", "values": ["virus", "hack", "crack"]}
+    ]
+}
+

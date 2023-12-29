@@ -1,0 +1,42 @@
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='output.css') }}">
+  <script src="/static/signin.js"></script>
+  <title>Đăng nhập</title>
+</head>
+<body>
+<section class="bg-gray-50 min-h-screen flex item-center justify-center">
+    <div class="bg-gradient-to-r items-center  from-gray-200 to-gray-300 flex rounded-2xl shadow-lg max-w-3xl p-5 ">
+        <div class="sm:w-1/2 px-5">
+            <h2 class="font-bold text-2xl text-gray-700">Mời bạn đăng nhập</h2>
+            <form id="loginForm" class="flex flex-col gap-2" method="POST">
+                <label for="email" class="test-sm mt-6 text-gray-">Tên đăng nhập:</label>
+                <input id="email" class="p-4 border w-full border-gray-500 rounded-xl"
+                type="text" name="email" placeholder="Email">
+                {% if error_username %}
+                <p class="text-red-400 text-sm">{{error_username}}</p>
+                {% endif %}
+
+                <label for="password" class="test-sm mt-4 text-gray-700">Mật khẩu:</label>
+                <input id="password" class="p-4 rounded-xl border-gray-500 border"
+                type="password" name="password" placeholder="Password">
+                {% if error_password %}
+                <p class="text-red-400 text-sm">{{error_password}}</p>
+                {% endif %}
+
+                <div class="flex ">
+                  <button type="submit" class="mt-4 bg-gray-800 rounded-xl text-white p-4  w-fit ">Đăng nhập</button>
+                  <a type="button" href="/signup" class="mt-4 bg-gray-800 rounded-xl text-white p-4 ml-4 w-fit">Đăng ký</a>
+                </div>
+                
+            </form>
+        </div>
+        <div class="sm:block hidden w-1/2 ml-4">
+            <img class="rounded-2xl" src="/static/img/login.jpg" alt="">
+        </div>
+    </div>
+</section>      
+</body>
+</html>
